@@ -35,7 +35,7 @@ const fetchFunction = (input, pageNum) => {
       location.hash = `${input}+${pageNum}`;
     })
     .catch(err => {
-      cards = 'Server issue please try again later';
+      let cards = 'Server issue please try again later';
       cardHolder.innerHTML = cards;
       console.log(err.message);
     });
