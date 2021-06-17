@@ -30,7 +30,7 @@ jobs:
       - uses: stefanoeb/eslint-action@1.0.2
       # Install modules
       - name: Install modules
-        run: npx
+        run: npm
       # Runs a single command using the runners shell
       - name: Linting
         run: eslint ./index.js
