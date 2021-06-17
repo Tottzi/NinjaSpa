@@ -37,6 +37,7 @@ const fetchFunction = (input, pageNum) => {
     .catch(err => {
       let cards = 'Server issue please try again later';
       cardHolder.innerHTML = cards;
+      cardHolder.innerHTML += `<div class="404"><img src="${notFound}" height="300px" width="300px"><h3>No images for the search<h3></div>`;
       console.log(err.message);
     });
 };
