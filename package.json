@@ -7,7 +7,7 @@
     "test": "eslint ./src/index.js",
     "test2": "jest --config jest.config.json --silent",
     "e2e": "jest --config jest-e2e.config.json",
-    "build": "webpack --config webpack.prod.js",
+    "build": "webpack",
     "start": "webpack serve --open --config webpack.dev.js",
     "lint": "eslint ./src/index.js"
   },
