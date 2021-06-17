@@ -28,10 +28,12 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
       - uses: stefanoeb/eslint-action@1.0.2
+        with:
+          files: src/index.js
       # Install modules
       - name: Install modules
         run: npx
       # Runs a single command using the runners shell
       - name: Linting
-        run: eslint ./index.js
+        run: eslint
 
