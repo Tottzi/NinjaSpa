@@ -3,26 +3,35 @@ version: 0.2
 
 phases:
   install:
+    runtime-version:
+      nodejs: 12
     commands:
-      - echo Installing Node 12...
-      - curl -sL https://deb.nodesource.com/setup_12.x | bash -
-      - apt install -y nodejs
-      - echo Installing Yarn...
-      - curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add -
-      - echo "deb https://dl.yarnpkg.com/debian/ stable main" | tee /etc/apt/sources.list.d/yarn.list
-      - apt install --no-install-recommends yarn
-  pre_build:
-    commands:
-      - echo Installing dependencies...
-      - yarn
+      # - echo Installing Node 12...
+      # - curl -sL https://deb.nodesource.com/setup_12.x | bash -
+      # - apt install -y nodejs
+      # - echo Installing Yarn...
+      # - curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add -
+      # - echo "deb https://dl.yarnpkg.com/debian/ stable main" | tee /etc/apt/sources.list.d/yarn.list
+      # - apt install --no-install-recommends yarn
+      - npm ci
+  # pre_build:
+  #   commands:
+  #     - echo Installing dependencies...
+  #     - yarn
   build:
     commands:
-      - echo Testing...
-      - yarn test
-      - echo Building...
-      - yarn build
+      # - echo Testing...
+      # - yarn test
+      # - echo Building...
+      # - yarn build
+      -npm run build
 artifacts:
   files:
     - "**/*"
   discard-paths: no
   base-directory: dist
+
+cache:
+  paths:
+    - '/root/.npm/**/*'
+    - '/node_modules/'
