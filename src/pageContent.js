@@ -3,11 +3,6 @@ import gitLogo from './images/Github-logo.png';
 const clientId = 'client_id=GdVV3nJZYh0yss5nPsyAquoqwClzN4agCPpQ2bq8mrM';
 const baseLink = 'https://api.unsplash.com/search/photos?page=1&query=';
 
-const formFunction = formData => {
-  const p = document.querySelector('.nav__logo');
-  p.innerHTML = 'Hi Adam';
-};
-
 const navbar = document.createElement('nav');
 navbar.innerHTML = `
 <p class='nav__logo nav__logo--white'>Logo</p>
@@ -42,3 +37,4 @@ const app = document.querySelector('#root');
 app.append(navbar, form, cardHolder, buttons);
 
 app.parentNode.append(pageFooter);
+
