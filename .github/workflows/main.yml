@@ -32,8 +32,8 @@ jobs:
           files: src/index.js
       # Install modules
       - name: Install modules
-        run: npx
+        run: yarn
       # Runs a single command using the runners shell
       - name: Linting
-        run: npm run lint
+        run: eslint . --ext .js,.jsx,.ts,.tsx
 
