@@ -8,7 +8,7 @@ const queryLink = '&orientation=squarish&query=';
 const fetchFunction = (input, pageNum) => {
   const cardHolder = document.querySelector('.card-holder');
   cardHolder.innerHTML = '';
-  fetch(`${baseLink}${pageNum}${queryLink}${input}&${clientId}`)
+  fetch(`${baseLink}${pageNum}${queryLink}${input}&clientId`)
     .then(data => data.json())
     .then(data => {
       let cards = '';
