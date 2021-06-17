@@ -31,9 +31,9 @@ jobs:
         with:
           files: src/index.js
       # Install modules
-      - name: Install modules
-        run: yarn
+      # - name: Install modules
+      #   run: yarn
       # Runs a single command using the runners shell
       - name: Linting
-        run: lint
+        run: npm run lint
 
