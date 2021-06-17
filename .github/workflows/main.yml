@@ -35,5 +35,5 @@ jobs:
         run: npx
       # Runs a single command using the runners shell
       - name: Linting
-        run: eslint
+        run: eslint . --ext .js,.jsx,.ts,.tsx
 
