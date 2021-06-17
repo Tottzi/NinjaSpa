@@ -1,0 +1,15 @@
+.nav {
+  background-color: rgb(106, 142, 35) ;
+
+  &__logo{
+    font-size: 2rem;
+
+    &--white{
+      color:white;
+    }
+  }
+}
+
+.footer {
+  background-image: linear-gradient(30deg, purple, yellow, black);
+}
