@@ -31,10 +31,12 @@ jobs:
         with:
           files: src/index.js
       # Secret API key
+      - name: key
+          env: # Or as an environment variable
+          API_KEY: ${{ secrets.API_KEY }}
       # Install modules
       # - name: Install modules
       #   run: yarn
       # Runs a single command using the runners shell
       - name: Linting
         run: npm t
-
