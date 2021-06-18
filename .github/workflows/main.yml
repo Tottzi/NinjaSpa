@@ -31,14 +31,11 @@ jobs:
         with:
           files: src/index.js
       # Secret API key
-      - name: key
+      - name: CI
         with: # Set the secret as an input
-          API_KEY: ${{ secrets.API_KEY }}
+          spa: ${{ secrets.NINJA }}
         env: # Or as an environment variable
-          API_KEY: ${{ secrets.API_KEY }}
-      # Install modules
-      # - name: Install modules
-      #   run: yarn
+          spa: ${{ secrets.NINJA }}
       # Runs a single command using the runners shell
       - name: Linting
         run: npm t
