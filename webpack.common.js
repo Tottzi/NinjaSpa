@@ -20,11 +20,9 @@ module.exports = {
     }),
     new CleanWebpackPlugin(),
     new webpack.HotModuleReplacementPlugin(),
-    new Dotenv(),
     new webpack.DefinePlugin({
       // Definitions...
-      'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV),
-      'process.env.MY_ENV': JSON.stringify(process.env.MY_ENV),
+      'process.env.NINJA': JSON.stringify(process.env.NINJA),
     }),
   ],
   module: {
