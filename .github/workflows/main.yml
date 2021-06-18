@@ -31,8 +31,6 @@ jobs:
         with:
           files: src/index.js
       # Secret API key
-      - name: API_key
-        with: ${{secrets.API_KEY}}
       # Install modules
       # - name: Install modules
       #   run: yarn
