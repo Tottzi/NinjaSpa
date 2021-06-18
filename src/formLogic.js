@@ -6,10 +6,9 @@ const baseLink = 'https://api.unsplash.com/search/photos?page=';
 const queryLink = '&orientation=squarish&query=';
 
 const fetchFunction = (input, pageNum) => {
-  console.log(process.env.NINJA)
   const cardHolder = document.querySelector('.card-holder');
   cardHolder.innerHTML = '';
-  fetch(`${baseLink}${pageNum}${queryLink}${input}&${process.env.NINJA}`)
+  fetch(`${baseLink}${pageNum}${queryLink}${input}&client_id=${process.env.NINJA}`)
     .then(data => data.json())
     .then(data => {
       let cards = '';

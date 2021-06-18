@@ -19,7 +19,13 @@ module.exports = {
       filename: 'index.html', // output file
     }),
     new CleanWebpackPlugin(),
+    new webpack.HotModuleReplacementPlugin(),
     new Dotenv(),
+    new webpack.DefinePlugin({
+      // Definitions...
+      'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV),
+      'process.env.MY_ENV': JSON.stringify(process.env.MY_ENV),
+    }),
   ],
   module: {
     rules: [
@@ -49,14 +55,8 @@ module.exports = {
       // css, postcss and sass
       {
         test: /\.(scss|css)$/,
-        use: ['style-loader', 'css-loader', 'postcss-loader', 'sass-loader'],
+        use: ['style-loader', 'css-loader', 'sass-loader'],
       },
     ],
   },
-
-  plugins: [
-    /* ... */
-    // Only update what has changed on hot reload
-    new webpack.HotModuleReplacementPlugin(),
-  ],
 };

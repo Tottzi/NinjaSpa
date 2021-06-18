@@ -18,6 +18,7 @@ module.exports = {
       filename: 'index.html', // output file
     }),
     new CleanWebpackPlugin(),
+    new webpack.HotModuleReplacementPlugin(),
     new Dotenv(),
   ],
   module: {
@@ -62,9 +63,5 @@ module.exports = {
     port: 8000,
   },
 
-  plugins: [
-    /* ... */
-    // Only update what has changed on hot reload
-    new webpack.HotModuleReplacementPlugin(),
-  ],
+
 };
