@@ -10,5 +10,3 @@ it('Should reject', done => {
 	expect(testCaseFromFile()).not.toBe('ok')
 	done()
 })
-
-
