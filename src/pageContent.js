@@ -3,7 +3,7 @@ import gitLogo from './images/Github-logo.png';
 const clientId = 'client_id=GdVV3nJZYh0yss5nPsyAquoqwClzN4agCPpQ2bq8mrM';
 const baseLink = 'https://api.unsplash.com/search/photos?page=1&query=';
 
-const navbar = document.createElement('nav');
+const navbar = document.createElement('nav'); 
 navbar.innerHTML = `
 <p class='nav__logo nav__logo--white'>Logo</p>
 `;
